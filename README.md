@@ -8,4 +8,4 @@
 
 
 This is a small e-commerce websit by PHP. There are basic funcitons which a e-commerce applicaiton have.
-See more detail: cloudaping.com
+See more detail: [LINK](cloudaping.com)

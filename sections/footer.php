@@ -1,10 +1,11 @@
 <footer>
 	<div class="footer-product">
 		<strong><p>PRODUCT</p></strong>
-		<div><a href="#">laptop</a></div>
-		<div><a href="#">laptop</a></div>
-		<div><a href="#">laptop</a></div>
-		<div><a href="#">laptop</a></div>
+		<div><a href="index.php?content=mainPages/product&product=laptop">laptop</a></div>
+		<div><a href="index.php?content=mainPages/product&product=mobile">mobile</a></div>
+		<div><a href="index.php?content=mainPages/product&product=computer">computer</a></div>
+		<div><a href="index.php?content=mainPages/product&product=camera">camera</a></div>
+		<div><a href="index.php?content=mainPages/product&product=audio&video">audio&video</a></div>
 	</div>
 	<div class="footer-about-us">
 		<strong><p>ABOUT US</p></strong>

@@ -6,6 +6,11 @@ if (isset($_SESSION['customer_email'])) {
 	header("location:index.php?content=userPage/securePage");
 
 }
+if (isset($_SESSION['trader_id'])) {
+    
+	header("location:admin.php");
+
+}
 ?>
 <div class='header-column1'>
 	<a href='index.php?content=mainPages/home'><img src='assets/images/log.png' alt='log' ></a>
@@ -32,7 +37,6 @@ if (isset($_SESSION['customer_email'])) {
 				<input class="login-form-submit"  value="Login" name="loginSubmit" type="submit"/>
 			</div>
 
-			<div><?php  echo $_SESSION['customer_email']; ?></div>
 		</form>
 		<div>facebook login</div>
 		<div class="login-register">

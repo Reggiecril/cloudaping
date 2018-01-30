@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php 
+    
     require 'config/init.php';
     require 'sections/adminHead.php';
     ?>

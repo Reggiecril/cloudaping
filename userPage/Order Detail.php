@@ -22,7 +22,7 @@
                   <div class="card-body"></br><?php $card1 = substr($payment_row['customer_payment_cardNumber'], 0, 0).'**** **** **** ***'.substr($payment_row['customer_payment_cardNumber'], 15);echo $card1;?></div>
                   <div class="card-body" style="font-size: 12px;"></br>valid: ** ** expire: ** **</div>
                   <div class="card-body">**-**-**  ********</div>
-                  <div class="card-body"><img src="assets/images/3-logoś.png" width="90" height="15" align="right"></div>
+                  <div class="card-body"><img src="assets/images/payment logo.png" width="90" height="15" align="right"></div>
                   
                 </div>
       </div>

@@ -4,7 +4,7 @@
     <span class="modular fl"><i class="add"></i><em>Edit/Add Product</em></span>
     <span class="modular fr"><a href="admin.php?content=adminPage/product/product_list" class="pt-link-btn">Product List</a></span>
   </div>
-<form method="post" action="admin.php?content=adminPage/product/createProduct" name="product_editForm">
+<form method="post" action="admin.php?content=adminPage/product/createProduct" name="product_editForm" enctype="multipart/form-data">
   <table class="list-style">
    <tr>
     <td style="text-align:center;color: #ddd;">Name:</td>
@@ -19,7 +19,7 @@
       <option value="Mobile">Mobile</option>
       <option value="Computer">Computer</option>
       <option value="Camera">Camera</option>
-      <option value="Audio&Video">Audio&Video</option>
+      <option value="AudioVideo">Audio&Video</option>
       <option value="Others">Others</option>
      </select>
     </td>
@@ -44,82 +44,70 @@
    <!-- for mobile -->
    <tr style="display:none;"  name="detail_mobile">
     <td align="right" style="color: #ddd;font-size: 10px;">Brand:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="mobileBrand"></td>
    </tr>
    <tr style="display:none;"  name="detail_mobile">
     <td align="right" style="color: #ddd;font-size: 10px;">Size:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="mobileSize"></td>
    </tr>
    <tr style="display:none;"  name="detail_mobile">
     <td align="right" style="color: #ddd;font-size: 10px;">System:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="mobileSystem"></td>
    </tr>
    <tr style="display:none;"  name="detail_mobile">
     <td align="right" style="color: #ddd;font-size: 10px;">Pixel:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="mobilePixel"></td>
    </tr>   
-   <tr style="display:none;"  name="detail_mobile">
-    <td align="right" style="color: #ddd;font-size: 10px;">Shop:</td>
-    <td><input type="text" name=""></td>
-   </tr>  
    <!-- for computer -->
    <tr style="display:none;"  name="detail_computer">
     <td align="right" style="color: #ddd;font-size: 10px;">Brand:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="computerBrand"></td>
    </tr>
    <tr style="display:none;"  name="detail_computer">
     <td align="right" style="color: #ddd;font-size: 10px;">Case:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="computerCase"></td>
    </tr>
    <tr style="display:none;"  name="detail_computer">
     <td align="right" style="color: #ddd;font-size: 10px;">Screen:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="computerScreen"></td>
    </tr>
    <tr style="display:none;"  name="detail_computer">
     <td align="right" style="color: #ddd;font-size: 10px;">CPU:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="computerCpu"></td>
    </tr>
    <tr style="display:none;"  name="detail_computer">
     <td align="right" style="color: #ddd;font-size: 10px;">Graphics Card:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="computerGraphicsCard"></td>
    </tr>
    <!-- for camera -->
    <tr style="display:none;"  name="detail_camera">
     <td align="right" style="color: #ddd;font-size: 10px;">Brand:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="cameraBrand"></td>
    </tr>
    <tr style="display:none;"  name="detail_camera">
     <td align="right" style="color: #ddd;font-size: 10px;">Type:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="cameraType"></td>
    </tr>
    <tr style="display:none;"  name="detail_camera">
     <td align="right" style="color: #ddd;font-size: 10px;">Pixel:</td>
-    <td><input type="text" name=""></td>
-   </tr>
-   <tr style="display:none;"  name="detail_camera">
-    <td align="right" style="color: #ddd;font-size: 10px;">Others:</td>
-    <td><input type="text" name=""></td>
+    <td><input type="text" name="cameraPixel"></td>
    </tr>
    <!-- for Audio&Video -->
    <tr style="display:none;"  name="detail_audio&video">
-    <td align="right" style="color: #ddd;font-size: 10px;">Headset:</td>
-    <td><input type="text" name=""></td>
+    <td align="right" style="color: #ddd;font-size: 10px;">Type:</td>
+    <td>
+      <select required name="audiovideoType" >
+       <option value="Headset">Headset</option>
+       <option value="VR">VR</option>
+       <option value="Speakers">Speakers</option>
+       <option value="MP3/MP4">MP3/MP4</option>
+       <option value="Tablet">Tablet</option>
+      </select>
+    </td>
    </tr>
    <tr style="display:none;"  name="detail_audio&video">
-    <td align="right" style="color: #ddd;font-size: 10px;">VR:</td>
-    <td><input type="text" name=""></td>
-   </tr>
-   <tr style="display:none;"  name="detail_audio&video">
-    <td align="right" style="color: #ddd;font-size: 10px;">Speakers:</td>
-    <td><input type="text" name=""></td>
-   </tr>
-   <tr style="display:none;"  name="detail_audio&video">
-    <td align="right" style="color: #ddd;font-size: 10px;">MP3/MP4:</td>
-    <td><input type="text" name=""></td>
-   </tr>
-   <tr style="display:none;"  name="detail_audio&video">
-    <td align="right" style="color: #ddd;font-size: 10px;">Tablet:</td>
-    <td><input type="text" name=""></td>
+    <td align="right" style="color: #ddd;font-size: 10px;">Brand:</td>
+    <td><input type="text" name="audiovideoBrand"></td>
    </tr>
    <!-- for Others -->
    <tr style="display:none;"  name="detail_others">
@@ -237,7 +225,7 @@
     
             }
         }else{
-            for(i=0;i<laptop.length+1;i++){
+            for(i=0;i<computer.length;i++){
                 computer[i].style.display="none";
             }   
         }
@@ -248,7 +236,7 @@
   
             }
         }else{
-            for(i=0;i<laptop.length;i++){
+            for(i=0;i<camera.length;i++){
                 camera[i].style.display="none";
             }   
         }

@@ -11,7 +11,7 @@ try {
     <span class="modular fl"><i class="add"></i><em>Edit Product</em></span>
     <span class="modular fr"><a href="admin.php?content=adminPage/product/product_list" class="pt-link-btn">Product List</a></span>
   </div>
-<form method="post" action="admin.php?content=adminPage/product/editProduct&id=<?php echo $row['product_id']; ?>" name="product_editForm">
+<form method="post" action="admin.php?content=adminPage/product/editProduct&id=<?php echo $row['product_id']; ?>" name="product_editForm" enctype="multipart/form-data">
   <table class="list-style">
    <tr>
     <td style="text-align:center;color: #ddd;">Name:</td>
@@ -180,9 +180,8 @@ try {
    <tr>
     <td style="text-align:center;color: #ddd;">Main Image：</td>
     <td>
-      <input type="hidden" name="image1" value="<?php echo $row['product_mainImage']; ?>">
-     <input type="file" id="suoluetu" class="hide" value="" name="image" />
-     <label for="suoluetu" class="labelBtnAdd">+</label>
+      <input type="file" id="suoluetu" class="hide" value="<?php echo $row['product_mainImage']; ?>" name="image" />
+      <label for="suoluetu" class="labelBtnAdd">+</label>
     </td>
    </tr>
    
